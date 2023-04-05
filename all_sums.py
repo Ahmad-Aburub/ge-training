@@ -21,3 +21,15 @@ A = [int(num) for num in input().split()]
 sorted_A = ''.join([str(num) for num in sorted(A)])
 output = re.search(r'(?<=11|22|33|44|55|66|77|88|99|00)(\d)(?=11|22|33|44|55|66|77|88|99|00)|(?<=11|22|33|44|55|66|77|88|99|00)(\d)\b|\b(\d)(?=11|22|33|44|55|66|77|88|99|00)', sorted_A)
 print(output.group())
+
+#another
+#Enter Python code here and hit the Run button
+N = int(input())
+A = [int(num) for num in input().split()]
+uniq = []
+for num in A:
+    if num not in uniq:
+        uniq.append(num)
+    else:
+        uniq.remove(num)
+print(str(uniq[0]))
