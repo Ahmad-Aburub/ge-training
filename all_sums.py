@@ -13,3 +13,11 @@ all_combs = [comb for comb in get_comb(nums) if comb]
 print(all_combs)
 sum_list = {sum(comb) for comb in all_combs}
 print(sum_list)
+
+#other
+#Enter Python code here and hit the Run button
+import re
+A = [int(num) for num in input().split()]
+sorted_A = ''.join([str(num) for num in sorted(A)])
+output = re.search(r'(?<=11|22|33|44|55|66|77|88|99|00)(\d)(?=11|22|33|44|55|66|77|88|99|00)|(?<=11|22|33|44|55|66|77|88|99|00)(\d)\b|\b(\d)(?=11|22|33|44|55|66|77|88|99|00)', sorted_A)
+print(output.group())
