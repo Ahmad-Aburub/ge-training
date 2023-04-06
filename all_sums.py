@@ -42,3 +42,23 @@ for num in A:
     else:
         uniq.remove(num)
 print(str(uniq[0]))
+
+#more
+def print_rangoli(size):
+    # your code goes here
+    a = ['a','b','c','d','e','f','g','h','i','j']
+    line = ''
+    output = ''
+    j = 1
+    for j in range(size):
+        for i in range(1, size):
+            if line:
+                line = a[i] + '-' + line + '-' + a[i]
+            else:
+                line = a[i]
+        line = line + '\n'
+        if output:
+            output = line + output + line
+        else:
+            
+    print(line)
