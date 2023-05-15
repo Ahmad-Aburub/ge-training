@@ -1,64 +1,17 @@
-#Enter Python code here and hit the Run button.#Enter Python code here and hit the Run button.
-def get_comb(num_list, i = 0, comb_list = str(), ans = None):
-    if ans is None:
-        ans = []
-    if i == (len(num_list)):
-        ans.append([int(x) for x in comb_list.strip().split()])
-        return ans
-    get_comb(num_list, i + 1, comb_list +f' {str(num_list[i])}', ans)
-    get_comb(num_list, i + 1, comb_list, ans)
-    return ans
-    
-nums = [int(x) for x in input().split()]
-print(nums)
-all_combs = [comb for comb in get_comb(nums) if comb]
-print(all_combs)
-sum_list = {sum(comb) for comb in all_combs}
-print(sum_list)
-    
-nums = [int(x) for x in input().split()]
-print(nums)
-all_combs = [comb for comb in get_comb(nums) if comb]
-print(all_combs)
-sum_list = {sum(comb) for comb in all_combs}
-print(sum_list)
-
-#other
-#Enter Python code here and hit the Run button
-import re
-A = [int(num) for num in input().split()]
-sorted_A = ''.join([str(num) for num in sorted(A)])
-output = re.search(r'(?<=11|22|33|44|55|66|77|88|99|00)(\d)(?=11|22|33|44|55|66|77|88|99|00)|(?<=11|22|33|44|55|66|77|88|99|00)(\d)\b|\b(\d)(?=11|22|33|44|55|66|77|88|99|00)', sorted_A)
-print(output.group())
-
-#another
-#Enter Python code here and hit the Run button
+# Online Python - IDE, Editor, Compiler, Interpreter
+# N = int(input())
+# M = int(input())
+# sum = 0
+sum2 = 0
+# while(N * M > 0):
+#     sum += N * M
+#     N -= 1
+#     M -= 1 
+# print(sum, 24 + 15 + 8 + 3)
 N = int(input())
-A = [int(num) for num in input().split()]
-uniq = []
-for num in A:
-    if num not in uniq:
-        uniq.append(num)
-    else:
-        uniq.remove(num)
-print(str(uniq[0]))
-
-#more
-def print_rangoli(size):
-    # your code goes here
-    a = ['a','b','c','d','e','f','g','h','i','j']
-    line = ''
-    output = ''
-    j = 1
-    for j in range(size):
-        for i in range(1, size):
-            if line:
-                line = a[i] + '-' + line + '-' + a[i]
-            else:
-                line = a[i]
-        line = line + '\n'
-        if output:
-            output = line + output + line
-        else:
-            
-    print(line)
+M = int(input())
+a = int(input())
+b = int(input())
+for i in range(a, b + 1):
+    sum2 += (N - (i - 1)) * (M - (i - 1))
+print(sum2)
